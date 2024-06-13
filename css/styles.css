@@ -141,6 +141,7 @@ a {
   max-width: 400px;
   margin-inline: auto;
   aspect-ratio: 1 / 1;
+  animation: scale-in-center 5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .hero__img {
@@ -155,11 +156,13 @@ a {
   align-items: center;
   gap: 2rem;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .feature__figure {
   width: 250px;
   aspect-ratio: 125 / 222;
+  animation: slide-in-right 5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .feature__img {
@@ -174,10 +177,13 @@ a {
   text-transform: uppercase;
   writing-mode: vertical-lr;
   text-orientation: upright;
+  animation: text-focus-in 2.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s both;
 }
 
+.feature:nth-child(even) .feature__figure { animation: slide-in-left 5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; }
+
 /* Aplica order -1 solo a los .feature impares, esto hara que el .feature__text se posicione antes que la imagen */
-.feature:nth-child(odd) .feature__text { order: -1; }
+.feature:nth-child(even) .feature__text { order: -1; }
 
 /* SECTION FUNCTIONALITIES */
 .functionalities {
@@ -498,6 +504,50 @@ a {
   &:hover,
   &:focus {
     color: var(--color-important);
+  }
+}
+
+@keyframes scale-in-center {
+  0% {
+    transform: scale(.25);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
   }
 }
 
