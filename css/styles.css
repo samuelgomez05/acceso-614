@@ -199,7 +199,7 @@ a {
   aspect-ratio: 125 / 222;
   animation: slide-in-right linear both;
   animation-timeline: view();
-  animation-range: entry 10% cover 30%;
+  animation-range: entry 30% cover 40%;
 }
 
 .feature__img {
@@ -216,13 +216,13 @@ a {
   text-orientation: upright;
   animation: text-focus-in linear both;
   animation-timeline: view();
-  animation-range: entry 10% cover 30%;
+  animation-range: entry 30% cover 40%;
 }
 
 .feature:nth-child(even) .feature__figure { 
   animation: slide-in-left linear both;
   animation-timeline: view();
-  animation-range: entry 10% cover 30%;
+  animation-range: entry 30% cover 40%;
 }
 
 /* Aplica order -1 solo a los .feature impares, esto hara que el .feature__text se posicione antes que la imagen */
@@ -253,7 +253,7 @@ a {
   aspect-ratio: 9 / 16;
   animation: opacity linear both;
   animation-timeline: view();
-  animation-range: entry 20% cover 40%;
+  animation-range: entry 30% cover 40%;
 
   &::before {
     content: "";
@@ -359,7 +359,7 @@ a {
   aspect-ratio: 9 / 16;
   animation: opacity linear both;
   animation-timeline: view();
-  animation-range: entry 20% cover 40%;
+  animation-range: entry 30% cover 40%;
 
   &::before {
     content: "";
@@ -440,7 +440,7 @@ a {
   line-height: 1.5;
   animation: opacity linear both;
   animation-timeline: view();
-  animation-range: entry 20% cover 40%;
+  animation-range: entry 20% cover 30%;
 }
 
 /* LOGIN */
@@ -571,9 +571,11 @@ a {
 @keyframes opacity {
   0% {
     opacity: 0;
+    transform: translateY(100px);
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
