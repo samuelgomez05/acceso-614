@@ -131,12 +131,6 @@ a {
   display: flex;
   align-items: center;
   gap: .5rem;
-  transition: color .2s;
-
-  &:hover,
-  &:focus {
-    color: var(--color-important);
-  }
 }
 
 .nav__icon {
@@ -177,7 +171,7 @@ a {
 .nav__navigation {
   display: inline-block;
   padding-block: .5rem;
-  font-size: .8rem;
+  font-size: .9rem;
   font-weight: 600;
   color: var(--color-secondary);
   border-bottom: 3px solid var(--color-important);
@@ -728,6 +722,30 @@ a {
 
 @media (width >= 768px) {
   .contact-link { font-size: 1rem; }
+
+  /* HEADER */
+  .nav__primary { gap: 2rem; }
+
+  .nav__menu {
+    position: static;
+    flex-direction: row;
+    justify-content: flex-end;
+    transform: translateY(0);
+  }
+
+  .nav__link {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+    transition: color .2s;
+
+    &:hover,
+    &:focus {
+      color: var(--color-important);
+    }
+  }
+
+  .nav__label { display: none; }
 
   /* HERO MAIN */
   .hero {
