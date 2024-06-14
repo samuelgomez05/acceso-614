@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
   <title>Acceso 614</title>
+  <script src="./js/modal.js" defer></script>
 </head>
 <body>
   <header class="header">
@@ -40,14 +41,14 @@
           <a class="nav__navigation" href="#">Inicio</a>
         </div>
     </nav>
-    <a class="contact-link" href="#">Contacto</a>
+    <button class="open-modal contact-modal">Contacto</button>
   </header>
   <main class="main">
     <section class="hero container">
       <div class="hero__texts">
         <h1 class="hero__title">Sistema de Alerta y Respuesta a Emergencias</h1>
         <p class="hero__paragraph">Proporcionamos soluciones completas mejorando la seguridad, la comunicación y la comodidad de los residentes.</p>
-        <a class="hero__cta" href="#">Contratar</a>
+        <button class="open-modal hero__cta">Contratar</button>
       </div>
       <figure class="hero__figure">
         <img class="hero__img" src="./assets/img/logo-principal.webp" alt="Logo principal de Acceso 614">
@@ -184,5 +185,33 @@
       </section>
     </section>
   </main>
+  <dialog id="modal" class="modal">
+    <button id="close-modal" class="modal__close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16"><path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/></svg>
+    </button>
+    <section class="modal__content">
+      <p class="modal__title">Contáctanos</p>
+      <p class="modal__paragraph">
+        <span>Sé de los primeros y recibe grandes descuentos por lanzamiento</span>
+        <a class="modal__email" href="mailto:info@acceso614.com">info@acceso614.com</a>
+        <span>o bien, a tráves del siguiente formulario</span>
+      </p>
+      <form class="contact" action="#" method="post">
+        <label class="contact__label" for="contact-name">
+          Nombre
+          <input id="contact-name" class="contact__input" type="text" placeholder="Escribe tu nombre">
+        </label>
+        <label class="contact__label" for="contact-email">
+          Correo eléctronico
+          <input id="contact-email" class="contact__input" type="email" placeholder="Escribe tu correo electronico">
+        </label>
+        <label class="contact__label" for="contact-email">
+          Número de contacto
+          <input id="contact-email" class="contact__input" type="tel" placeholder="Escribe tu número de contacto">
+        </label>
+        <input class="contact__input contact__input--submit" type="submit" value="Enviar">
+      </form>
+    </section>
+  </dialog>
 </body>
 </html>
