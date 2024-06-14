@@ -798,7 +798,6 @@ a {
     align-items: center;
     gap: 3rem;
     max-width: 1200px;
-    padding-inline: 4rem;
   }
 
   .login__form {
@@ -846,4 +845,7 @@ a {
 
   /* SECTION ACCESSIBILITY */
   .accessibility { gap: 4rem; }
+
+  /* LOGIN */
+  .login__content { padding-inline: 4rem; }
 }
