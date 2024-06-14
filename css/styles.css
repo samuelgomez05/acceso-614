@@ -24,11 +24,9 @@
 ::-webkit-scrollbar-thumb:hover { background-color: #e1af1cdd; }
 
 body {
-  max-width: 100vw;
   font-family: "Poppins", sans-serif;
   color: var(--color-primary);
   background-color: var(--color-secondary);
-  overflow-x: hidden;
 }
 
 a {
@@ -40,6 +38,31 @@ a {
   width: 90%;
   max-width: 1200px;
   margin-inline: auto;
+}
+
+.contact-link {
+  position: fixed;
+  bottom: 2rem;
+  right: 0;
+  z-index: 100;
+  display: inline-block;
+  padding: 1rem .5rem;
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--color-important);
+  letter-spacing: 2px;
+  writing-mode: vertical-lr;
+  background-color: var(--color-tertiary);
+  border-bottom-right-radius: .8rem;
+  border-top-right-radius: .8rem;
+  transform: rotate(180deg);
+  transition: color .3s, background-color .3s;
+
+  &:hover,
+  &:focus {
+    color: var(--color-primary);
+    background-color: var(--color-important);
+  }
 }
 
 /* HEADER */
@@ -567,7 +590,7 @@ a {
 
 @keyframes slide-in-right {
   0% {
-    transform: translateX(100%);
+    transform: translateX(-100%);
     opacity: 0;
   }
   100% {
@@ -647,6 +670,8 @@ a {
 }
 
 @media (width >= 768px) {
+  .contact-link { font-size: 1rem; }
+
   /* HERO MAIN */
   .hero {
     flex-direction: row;
