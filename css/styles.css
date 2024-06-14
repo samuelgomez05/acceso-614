@@ -250,7 +250,7 @@ a {
   width: 80%;
   max-width: 300px;
   margin-inline: auto;
-  aspect-ratio: 9 / 16;
+  aspect-ratio: 300 / 587;
   animation: opacity linear both;
   animation-timeline: view();
   animation-range: entry 30% cover 40%;
@@ -298,6 +298,7 @@ a {
 
 .functionality__paragraph {
   padding: 1rem;
+  font-size: .9rem;
   color: var(--color-paragraph);
   text-wrap: pretty;
   line-height: 1.5;
@@ -318,7 +319,7 @@ a {
   width: 90%;
   max-width: 400px;
   margin-inline: auto;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 184 / 131;
   animation: scale-in-center linear both;
   animation-timeline: view();
   animation-range: entry 20% cover 40%;
