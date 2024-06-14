@@ -74,34 +74,49 @@ a {
 
 .nav__primary {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 1.5rem;
+  height: 5rem;
   padding-block: 1rem;
+  color: var(--color-secondary);
   border-bottom: 1px solid #dedede;
 }
 
-.nav__figure { width: 150px; }
+.nav__figure {
+  width: 150px;
+  aspect-ratio: 75 / 13;
+}
 
 .nav__img {
   display: block;
   width: 100%;
 }
 
-.nav__container-login {
+.nav__menu {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  right: 0;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: .5rem;
+  gap: 2rem;
+  width: 100%;
+  padding-block: 2rem;
+  background-color: var(--color-primary);
+  list-style: none;
+  transform: translateY(-150%);
+  transition: transform .5s;
 }
 
-.nav__icon {
-  width: 1.25rem;
-  height: 1.25rem;
+.nav__primary:has(.nav__label .nav__checkbox:checked) .nav__menu {
+  transform: translateY(0);
 }
 
-.nav__login {
-  font-size: .9rem;
+.nav__link {
+  font-size: 1rem;
   font-weight: 600;
   color: var(--color-secondary);
   transition: color .2s;
@@ -110,6 +125,53 @@ a {
   &:focus {
     color: var(--color-important);
   }
+}
+
+.nav__container-login {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  transition: color .2s;
+
+  &:hover,
+  &:focus {
+    color: var(--color-important);
+  }
+}
+
+.nav__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.nav__label {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  transition: color .2s;
+
+  &:hover,
+  &:focus {
+    color: var(--color-important);
+  }
+}
+
+.nav__checkbox { display: none; }
+
+.icon-menu,
+.icon-close {
+  width: 2rem;
+  height: 2rem;
+}
+
+.icon-close { display: none; }
+
+.nav__primary:has(.nav__label .nav__checkbox:checked) .icon-menu {
+  display: none;
+}
+
+.nav__primary:has(.nav__label .nav__checkbox:checked) .icon-close {
+  display: block;
 }
 
 .nav__navigation {
@@ -643,14 +705,6 @@ a {
   100% {
     filter: blur(0px);
     opacity: 1;
-  }
-}
-
-@media (width >= 375px) {
-  /* HERO NAV */
-  .nav__primary {
-    flex-direction: row;
-    justify-content: space-between;
   }
 }
 
