@@ -581,7 +581,6 @@ a {
 .modal__close {
   display: block;
   margin-left: auto;
-  margin-bottom: 1rem;
   color: var(--color-primary);
   background-color: transparent;
   border: none;
@@ -674,6 +673,30 @@ a {
 
   &:active {
     transform: scale(.95);
+  }
+}
+
+/* GRADIENT */
+.gradient {
+  width: 50%;
+  min-height: 25vh;
+}
+
+.gradient-animate {
+  opacity: .5;
+  backdrop-filter: blur(10px);
+  animation: color-change-2x 2s linear infinite alternate both;
+}
+
+@keyframes color-change-2x {
+  0% {
+    background: #ff0000;
+    box-shadow: 0 0 100px 25px red;
+  }
+  
+  100% {
+    background: #0000ff;
+    box-shadow: 0 0 100px 25px blue;
   }
 }
 
