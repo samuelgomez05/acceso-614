@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #ffffff;
+  --color-secondary: #000000;
+  --color-tertiary: #1c1c1a;
+  --color-paragraph: #b3b3b9;
+  --color-important: #e1af1c;
+}
+
+::-webkit-scrollbar { width: 8px; }
+
+::-webkit-scrollbar-track { background-color: var(--color-tertiary); }
+
+::-webkit-scrollbar-thumb { 
+  background-color: var(--color-important);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover { background-color: #e1af1cdd; }
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin-inline: auto;
+}
