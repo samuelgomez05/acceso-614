@@ -379,6 +379,9 @@ a {
   min-height: 100vh;
   padding-block: 5rem;
   overflow-x: hidden;
+  animation: opacity linear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
 }
 
 .carousel__figure {
