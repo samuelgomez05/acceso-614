@@ -1,0 +1,108 @@
+/* SECTION FUNCTIONALITIES */
+.functionalities {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  min-height: 100vh;
+  padding-block: 5rem;
+}
+
+.functionalities__title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.functionalities__figure {
+  position: relative;
+  width: 80%;
+  max-width: 300px;
+  margin-inline: auto;
+  aspect-ratio: 300 / 587;
+  animation: opacity linear both;
+  animation-timeline: view();
+  animation-range: entry 30% cover 40%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    width: 50%;
+    height: 80%;
+    margin: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 100px var(--color-primary);
+  }
+}
+
+.functionalities__img {
+  display: block;
+  width: 100%;
+}
+
+.functionalities__group {
+  display: grid;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+.functionality__title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  font-weight: 700;
+  list-style: none;
+  background-color: var(--color-tertiary);
+  border-radius: 3rem;
+  cursor: pointer;
+}
+
+.functionality__icon { transition: transform .3s; }
+
+.functionality[open] .functionality__icon { transform: rotate(180deg); }
+
+.functionality__paragraph {
+  padding: 1rem;
+  font-size: .9rem;
+  color: var(--color-paragraph);
+  text-wrap: pretty;
+  line-height: 1.5;
+}
+
+@media (width >= 600px) {
+  /* SECTION FUNCTIONALITIES */
+  .functionalities__group { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (width >= 768px) {
+  /* SECTION FUNCTIONALITIES */
+  .functionalities { gap: 2rem; }
+
+  .functionalities__group { gap: 2rem; }
+}
+
+@media (width >= 1024px) {
+  /* SECTION FUNCTIONALITIES */
+  .functionalities__figure { margin-bottom: 1rem; }
+
+  .functionalities__group { 
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "one one two two three three"
+                        ". four four five five .";
+  }
+
+  .functionality:nth-child(1) { grid-area: one; }
+
+  .functionality:nth-child(2) { grid-area: two; }
+
+  .functionality:nth-child(3) { grid-area: three; }
+
+  .functionality:nth-child(4) { grid-area: four; }
+
+  .functionality:nth-child(5) { grid-area: five; }
+}
