@@ -1,0 +1,11 @@
+/* GRADIENT */
+.gradient {
+  width: 50%;
+  min-height: 25vh;
+}
+
+.gradient-animate {
+  opacity: .5;
+  backdrop-filter: blur(10px);
+  animation: color-change-2x 2s linear infinite alternate both;
+}
