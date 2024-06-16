@@ -39,3 +39,70 @@ a {
   max-width: 1200px;
   margin-inline: auto;
 }
+
+@keyframes color-change-2x {
+  0% {
+    background: #ff0000;
+    box-shadow: 0 0 100px 25px red;
+  }
+  
+  100% {
+    background: #0000ff;
+    box-shadow: 0 0 100px 25px blue;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in-center {
+  0% {
+    transform: scale(.25);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
