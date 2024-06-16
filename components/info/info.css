@@ -1,0 +1,33 @@
+/* SECTION INFO */
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 650px;
+  min-height: 100vh;
+  padding-block: 5rem;
+}
+
+.info__title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  text-wrap: balance;
+  text-transform: uppercase;
+  line-height: 1.25;
+  animation: opacity linear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+}
+
+.info__paragraph {
+  text-align: center;
+  text-wrap: pretty;
+  color: var(--color-paragraph);
+  line-height: 1.5;
+  animation: opacity linear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 30%;
+}
