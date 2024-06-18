@@ -1,0 +1,13 @@
+/* BACKGROUND */
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../assets/img/fondo-particulas.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: .8;
+}
