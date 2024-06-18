@@ -31,3 +31,13 @@
   animation-timeline: view();
   animation-range: entry 20% cover 30%;
 }
+
+@media (width >= 768px) {
+  /* SECTION INFO */
+  .info__title { font-size: 2.25rem; }
+}
+
+@media (width >= 1024px) {
+  /* SECTION INFO */
+  .info__title { font-size: 2.5rem; }
+}

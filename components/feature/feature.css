@@ -54,7 +54,7 @@
   /* SECTIONS FEATURE */
   .feature { gap: 3rem; }
 
-  .feature__text { font-size: 2.5rem; }
+  .feature__text { font-size: 3rem; }
 }
 
 @media (width >= 1024px) {
@@ -63,5 +63,10 @@
 
   .feature__figure { width: 300px; }
 
-  .feature__text { font-size: 3rem; }
+  .feature__text { font-size: 3.5rem; }
+}
+
+@media (width >= 1200px) {
+  /* SECTIONS FEATURE */
+  .feature__text { font-size: 4rem; }
 }

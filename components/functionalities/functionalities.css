@@ -83,11 +83,15 @@
   /* SECTION FUNCTIONALITIES */
   .functionalities { gap: 2rem; }
 
+  .functionalities__title { font-size: 2.25rem; }
+
   .functionalities__group { gap: 2rem; }
 }
 
 @media (width >= 1024px) {
   /* SECTION FUNCTIONALITIES */
+  .functionalities__title { font-size: 2.5rem; }
+
   .functionalities__figure { margin-bottom: 1rem; }
 
   .functionalities__group { 

@@ -75,6 +75,8 @@
   }
 
   .hero__texts { gap: 1.5rem; }
+
+  .hero__title { font-size: 2.25rem; }
 }
 
 @media (width >= 1024px) {
@@ -83,4 +85,6 @@
     gap: 4rem;
     padding-inline: 4rem;
   }
+
+  .hero__title { font-size: 2.5rem; }
 }
