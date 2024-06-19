@@ -399,7 +399,7 @@ a {
   font-weight: 700;
   list-style: none;
   background-color: var(--color-tertiary);
-  border-radius: 3rem;
+  border-radius: 1rem;
   cursor: pointer;
 }
 
@@ -550,7 +550,7 @@ a {
   font-weight: 700;
   list-style: none;
   background-color: var(--color-tertiary);
-  border-radius: 3rem;
+  border-radius: 1rem;
   cursor: pointer;
 }
 
