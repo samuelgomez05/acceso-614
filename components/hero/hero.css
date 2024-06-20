@@ -5,7 +5,6 @@
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  min-height: 100vh;
   padding-block: 5rem;
 }
 
@@ -13,21 +12,15 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 2.5rem;
+  max-width: 600px;
 }
 
 .hero__title {
-  font-size: 2rem;
+  font-size: 1.9rem;
   font-weight: 700;
   text-wrap: balance;
   line-height: 1.25;
-}
-
-.hero__paragraph {
-  margin-bottom: 1rem;
-  text-wrap: pretty;
-  color: var(--color-paragraph);
-  line-height: 1.5;
 }
 
 .hero__cta {
@@ -73,10 +66,6 @@
     flex-direction: row;
     align-items: center;
   }
-
-  .hero__texts { gap: 1.5rem; }
-
-  .hero__title { font-size: 2.25rem; }
 }
 
 @media (width >= 1024px) {
@@ -85,6 +74,4 @@
     gap: 4rem;
     padding-inline: 4rem;
   }
-
-  .hero__title { font-size: 2.5rem; }
 }

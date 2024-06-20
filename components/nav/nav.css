@@ -144,7 +144,6 @@
   .nav__link {
     font-size: 1rem;
     font-weight: 600;
-    color: var(--color-secondary);
     transition: color .2s;
 
     &:hover,

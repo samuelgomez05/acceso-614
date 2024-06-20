@@ -1102,11 +1102,8 @@ a {
   .info__title { font-size: 2.25rem; }
 
   .battery {
-    position: absolute;
     bottom: 1rem;
     left: 1rem;
-    display: flex;
-    align-items: center;
     transform: scale(1);
   }
 }
@@ -1119,9 +1116,7 @@ a {
   }
 
   /* SECTIONS FEATURE */
-  .feature {
-    flex-direction: row;
-  }
+  .feature { flex-direction: row; }
 
   .feature__content { gap: 2rem; }
 
@@ -1141,7 +1136,7 @@ a {
   .feature:nth-child(odd) .feature__paragraph { 
     order: -1;
     text-align: right;
-   }
+  }
 
   /* SECTION FUNCTIONALITIES */
   .functionalities__title { font-size: 2.5rem; }

@@ -2,6 +2,7 @@
 .gradient {
   width: 50%;
   min-height: 25vh;
+  margin-top: 8rem;
 }
 
 .gradient-animate {

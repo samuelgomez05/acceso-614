@@ -4,7 +4,6 @@
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  min-height: 100vh;
   padding-block: 5rem;
 }
 
@@ -58,7 +57,8 @@
   font-weight: 700;
   list-style: none;
   background-color: var(--color-tertiary);
-  border-radius: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px -5px var(--color-primary);
   cursor: pointer;
 }
 
@@ -68,7 +68,6 @@
 
 .functionality__paragraph {
   padding: 1rem;
-  font-size: .9rem;
   color: var(--color-paragraph);
   text-wrap: pretty;
   line-height: 1.5;
@@ -97,7 +96,7 @@
   .functionalities__group { 
     grid-template-columns: repeat(6, 1fr);
     grid-template-areas: "one one two two three three"
-                        ". four four five five .";
+                         ". four four five five .";
   }
 
   .functionality:nth-child(1) { grid-area: one; }
@@ -107,6 +106,6 @@
   .functionality:nth-child(3) { grid-area: three; }
 
   .functionality:nth-child(4) { grid-area: four; }
-
+  
   .functionality:nth-child(5) { grid-area: five; }
 }
