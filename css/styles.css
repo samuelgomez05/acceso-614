@@ -23,8 +23,16 @@
 
 ::-webkit-scrollbar-thumb:hover { background-color: #e1af1cdd; }
 
+@font-face {
+  font-family: "Rubik";
+  src: url("../assets/font/Rubik-VariableFont_wght.woff2") format(woff2) tech(variations), /* sintaxis moderna  */
+  url("../assets/font/Rubik-VariableFont_wght.woff2") format("woff2-variations"), /* Si no acepta la sintaxis moderna, aplicamos la que soporten todos los navegadores */
+  url("../assets/font/Rubik-VariableFont_wght.ttf") format("truetype"); /* Si el navegador no acepta formato woff2, se usara el ttf */
+  font-weight: 300 900;
+}
+
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Rubik", sans-serif;
   color: var(--color-primary);
   background-color: var(--color-secondary);
 }
@@ -334,7 +342,6 @@ a {
 
 .feature__paragraph {
   max-width: 400px;
-  font-size: .9rem;
   color: var(--color-paragraph);
   text-align: center;
   text-wrap: pretty;
@@ -409,7 +416,6 @@ a {
 
 .functionality__paragraph {
   padding: 1rem;
-  font-size: .9rem;
   color: var(--color-paragraph);
   text-wrap: pretty;
   line-height: 1.5;
@@ -659,7 +665,6 @@ a {
   align-items: center;
   gap: .5rem;
   margin-bottom: 1rem;
-  font-size: .9rem;
   text-align: center;
   color: var(--color-paragraph);
 }
@@ -692,7 +697,7 @@ a {
 
 .contact__input {
   padding: .5rem 1rem;
-  font-size: .9rem;
+  font-size: 1rem;
   font-family: inherit;
   border-radius: .5rem;
   border: none;

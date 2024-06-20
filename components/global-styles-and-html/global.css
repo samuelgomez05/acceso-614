@@ -23,8 +23,16 @@
 
 ::-webkit-scrollbar-thumb:hover { background-color: #e1af1cdd; }
 
+@font-face {
+  font-family: "Rubik";
+  src: url("../assets/font/Rubik-VariableFont_wght.woff2") format(woff2) tech(variations), /* sintaxis moderna  */
+  url("../assets/font/Rubik-VariableFont_wght.woff2") format("woff2-variations"), /* Si no acepta la sintaxis moderna, aplicamos la que soporten todos los navegadores */
+  url("../assets/font/Rubik-VariableFont_wght.ttf") format("truetype"); /* Si el navegador no acepta formato woff2, se usara el ttf */
+  font-weight: 300 900;
+}
+
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Rubik", sans-serif;
   color: var(--color-primary);
   background-color: var(--color-secondary);
 }
