@@ -1,0 +1,25 @@
+/* SLIDER VIDEOS */
+.slider-videos {
+  display: flex;
+  gap: 1.5rem;
+  width: 90%;
+  margin-inline: auto;
+  padding-block: 5rem;
+  overflow: hidden;
+  animation: opacity linear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+}
+
+.video {
+  width: 100%;
+  max-width: 550px;
+}
+
+@media (width >= 768px) {
+  /* SLIDER VIDEOS */
+  .slider-videos { 
+    width: 100%;
+    max-width: 1440px;
+  }
+}

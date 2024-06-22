@@ -93,4 +93,8 @@
     width: 350px;
     margin-inline: 0;
   }
+
+  .solution__title { font-size: 1.15rem; }
+
+  .solution__paragraph { font-size: 1.15rem; }
 }

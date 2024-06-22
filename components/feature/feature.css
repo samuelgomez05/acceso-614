@@ -67,9 +67,11 @@
 
 @media (width >= 768px) {
   /* SECTIONS FEATURE */
-  .feature { gap: 3rem; }
+  .feature__content { gap: 3rem; }
 
   .feature__text { font-size: 3rem; }
+
+  .feature__paragraph { font-size: 1.2rem; }
 }
 
 @media (width >= 1024px) {
@@ -83,7 +85,7 @@
   .feature__text { font-size: 3.5rem; }
 
   .feature__paragraph { 
-    font-size: 1rem;
+    font-size: 1.3rem;
     text-align: left;
     animation: opacity linear both;
     animation-timeline: view();

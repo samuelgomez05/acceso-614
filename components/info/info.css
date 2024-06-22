@@ -192,6 +192,17 @@
   }
 }
 
+/* GRADIENT */
+.gradient {
+  width: 50%;
+}
+
+.gradient-animate {
+  opacity: .5;
+  backdrop-filter: blur(10px);
+  animation: color-change-2x 2s linear infinite alternate both;
+}
+
 @media (width >= 768px) {
   /* SECTION INFO */
   .info { 
@@ -220,6 +231,8 @@
 
   .info__title { font-size: 2.25rem; }
 
+  .info__paragraph { font-size: 1.15rem; }
+
   .battery {
     bottom: 1rem;
     left: 1rem;
@@ -230,4 +243,6 @@
 @media (width >= 1024px) {
   /* SECTION INFO */
   .info__title { font-size: 2.5rem; }
+
+  .info__paragraph { font-size: 1.2rem; }
 }

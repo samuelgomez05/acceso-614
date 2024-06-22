@@ -1176,8 +1176,6 @@ a {
 }
 
 @media (width >= 768px) {
-  .contact-link { font-size: 1rem; }
-
   /* HEADER */
   .nav__primary { gap: 2rem; }
 
