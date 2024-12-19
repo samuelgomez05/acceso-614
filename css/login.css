@@ -10,10 +10,10 @@
 .login__content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   gap: 2rem;
-  max-width: 350px;
   min-height: 100vh;
+  padding-inline: 1rem;
 }
 
 .login__figure {
@@ -130,7 +130,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 3rem;
-    max-width: 1200px;
+    padding-inline: 0;
   }
 
   .login__form {
@@ -139,11 +139,6 @@
     max-width: calc(350px + 3rem);
     min-height: 100vh;
     padding-inline: 3rem;
-    background-color: #20201f55;
+    background-color: #20201f;
   }
-}
-
-@media (width >= 1024px) {
-  /* LOGIN */
-  .login__content { padding-inline: 4rem; }
 }
