@@ -70,7 +70,7 @@ a {
   position: fixed;
   left: 0;
   right: 0;
-  width: 100%;
+  width: 100vw;
   z-index: 999;
 }
 
@@ -106,7 +106,7 @@ a {
   top: 4rem;
   left: 0;
   right: 0;
-  z-index: 999;
+  z-index: -10;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -213,7 +213,7 @@ a {
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  padding-block: 5rem;
+  padding-block: 8rem;
 }
 
 .hero__texts {
@@ -225,13 +225,13 @@ a {
 }
 
 .hero__title {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 1.5rem !important;
-  font-size: 2rem !important;
-  font-weight: 400 !important;
-  text-wrap: balance !important;
-  text-align: center !important;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-wrap: balance;
+  text-align: center;
 }
 
 .hero__group {
@@ -264,6 +264,7 @@ a {
 }
 
 .hero__paragraph {
+  text-align: center;
   font-weight: bold;
   font-size: 1.125rem;
   color: var(--color-primary);
@@ -271,8 +272,9 @@ a {
 }
 
 .hero__figure {
+  order: -1;
   width: 90%;
-  max-width: 500px;
+  max-width: 450px;
   margin-inline: auto;
   aspect-ratio: 1 / 1;
 }
@@ -324,7 +326,7 @@ a {
   animation-range: entry 30% cover 40%;
 }
 
-.feature:nth-child(even) .feature__figure {
+.feature:nth-child(odd) .feature__figure {
   animation: slide-in-left linear both;
   animation-timeline: view();
   animation-range: entry 30% cover 40%;
@@ -419,16 +421,7 @@ a {
 
 /* SECTION CAROUSEL - SLIDERS */
 .carousel {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5rem;
   padding-block: 5rem;
-  overflow-x: hidden;
-  animation: opacity linear both;
-  animation-timeline: view();
-  animation-range: entry 20% cover 45%;
 }
 
 .swiper-slide img {
@@ -485,7 +478,7 @@ a {
   justify-content: center;
   align-items: baseline;
   gap: 2rem;
-  padding-block: 5rem;
+  padding-block: 10rem;
 }
 
 .accessibility__figure {
@@ -518,6 +511,7 @@ a {
   font-size: 1.5rem;
   text-align: center;
   color: white;
+  padding-block: 5rem;
 }
 
 /* SECTION SOLUTIONS */
@@ -868,24 +862,24 @@ a {
 .services__images {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .services__figure {
   width: 100%;
-  aspect-ratio: 360 / 239;
+  max-height: 320px;
   animation: opacity linear both;
   animation-timeline: view();
   animation-range: entry 20% cover 30%;
-
-  &:nth-child(2) {
-    aspect-ratio: 360 / 541;
-  }
+  aspect-ratio: 16/9;
 }
 
 .services__img {
   display: block;
   width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  aspect-ratio: 16/9;
 }
 
 /* SECTION OPINIONS */
@@ -934,7 +928,6 @@ a {
 
 /* FOOTER */
 .footer {
-  margin-top: 2rem;
   color: var(--color-primary);
   background-color: var(--color-secondary);
 }
@@ -958,12 +951,13 @@ a {
 
 .footer__content {
   display: grid;
-  gap: 3rem;
+  gap: 2rem;
   padding-block: 3rem;
 }
 
 .footer__title {
-  font-size: 1.5rem;
+  text-align: center;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--color-important);
   text-wrap: balance;
@@ -1002,8 +996,7 @@ a {
 }
 
 .footer__figure {
-  width: 100px;
-  margin-inline: auto;
+  width: 50px;
 }
 
 .footer__img {
@@ -1016,7 +1009,7 @@ a {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 /* MODAL */
@@ -1068,7 +1061,8 @@ a {
   gap: 1rem;
   max-width: 512px;
   margin: 0 auto;
-  padding-block: 5rem;
+  padding-top: 8rem;
+  padding-bottom: 5rem;
 }
 
 .modal__title {
@@ -1151,6 +1145,49 @@ a {
   }
 }
 
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  z-index: 20;
+  right: 1rem;
+  bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  color: #ffffff;
+  background-color: #25d366;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.whatsapp::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+  background-color: #25d366;
+  border-radius: 50%;
+  animation: ping 1.5s cubic-bezier(0,0,.2,1) infinite;
+}
+
+.whatsapp:hover::after {
+  animation: none;
+}
+
+.whatsapp svg {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
 @keyframes color-change-2x {
   0% {
     background: #ff0000;
@@ -1201,7 +1238,7 @@ a {
 
 @keyframes slide-in-left {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(100%);
     opacity: 0;
   }
 
@@ -1254,6 +1291,7 @@ a {
 
   .nav__menu {
     position: static;
+    z-index: 0;
     flex-direction: row;
     justify-content: flex-end;
     height: 100%;
@@ -1269,6 +1307,10 @@ a {
   .hero__content {
     flex-direction: row;
     align-items: center;
+  }
+
+  .hero__figure {
+    order: 1;
   }
 
   /* SECTIONS FEATURE */
@@ -1319,14 +1361,6 @@ a {
   }
 
   /* SECTION CAROUSEL - SLIDERS */
-  .carousel {
-    width: 100%;
-    max-width: 100%;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 0;
-    max-width: 1440px;
-  }
 
   .carousel__figure {
     max-width: 500px;
@@ -1448,9 +1482,16 @@ a {
   }
 
   .services__images {
-    gap: 1rem;
     width: 30%;
-    max-width: 200px;
+    max-width: 250px;
+  }
+
+  .services__figure {
+    aspect-ratio: auto;
+  }
+
+  .services__img {
+    aspect-ratio: auto;
   }
 
   /* SECTION OPINIONS */
@@ -1488,8 +1529,31 @@ a {
     align-items: center;
   }
 
+  .footer__title {
+    text-align: left;
+  }
+
   .footer__figure {
+    width: 80px;
+    margin-left: auto;
     grid-column: span 3;
+  }
+
+  .new {
+    margin-left: auto;
+    flex-wrap: nowrap;
+    gap: 3rem;
+  }
+
+  /* WHATSAPP */
+  .whatsapp {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .whatsapp svg {
+      width: 2rem;
+      height: 2rem;
   }
 }
 
@@ -1499,6 +1563,11 @@ a {
   .hero__content {
     gap: 4rem;
     padding-inline: 1rem;
+    padding-block: 5rem;
+  }
+
+  .hero__title {
+    font-size: 2rem;
   }
 
   /* SECTIONS FEATURE */
@@ -1565,9 +1634,8 @@ a {
   }
 
   .services__images {
-    gap: 1rem;
     width: 30%;
-    max-width: 200px;
+    max-width: 250px;
   }
 
   /* SECTION OPINIONS */

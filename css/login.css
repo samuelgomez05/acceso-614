@@ -10,10 +10,12 @@
 .login__content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   gap: 2rem;
   min-height: 100vh;
   padding-inline: 1rem;
+  padding-top: 8rem;
+  padding-bottom: 5rem;
 }
 
 .login__figure {
@@ -130,7 +132,8 @@
     justify-content: space-between;
     align-items: center;
     gap: 3rem;
-    padding-inline: 0;
+    padding-right: 0;
+    padding-block: 0;
   }
 
   .login__form {
