@@ -68,6 +68,7 @@ a {
 /* HEADER */
 .header {
   position: fixed;
+  top: 0;
   left: 0;
   right: 0;
   width: 100vw;
@@ -304,7 +305,7 @@ a {
 .feature__figure {
   width: 250px;
   aspect-ratio: 125 / 222;
-  animation: slide-in-right linear both;
+  animation: slide-in-right-mobile linear both;
   animation-timeline: view();
   animation-range: entry 30% cover 40%;
 }
@@ -327,7 +328,7 @@ a {
 }
 
 .feature:nth-child(odd) .feature__figure {
-  animation: slide-in-left linear both;
+  animation: slide-in-left-mobile linear both;
   animation-timeline: view();
   animation-range: entry 30% cover 40%;
 }
@@ -530,7 +531,7 @@ a {
   max-width: 300px;
   margin-inline: auto;
   aspect-ratio: 9 / 16;
-  animation: slide-in-right linear both;
+  animation: slide-in-right-mobile linear both;
   animation-timeline: view();
   animation-range: entry 30% cover 40%;
 }
@@ -1224,6 +1225,30 @@ a {
   }
 }
 
+@keyframes slide-in-right-mobile {
+  0% {
+    transform: translateX(-25%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left-mobile {
+  0% {
+    transform: translateX(25%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 @keyframes slide-in-right {
   0% {
     transform: translateX(-100%);
@@ -1279,6 +1304,20 @@ a {
   .solutions__group {
     width: 90%;
     margin-inline: auto;
+  }
+}
+
+@media (width >= 640px) {
+  .feature__figure {
+    animation-name: slide-in-right;
+  }
+
+  .feature:nth-child(odd) .feature__figure {
+    animation-name: slide-in-left;
+  }
+
+  .solutions__figure {
+    animation: slide-in-right;
   }
 }
 

@@ -10,7 +10,7 @@
   <link rel="preload" href="./assets/font/Rubik-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./assets/img/fondo-particulas.webp" as="image" type="image/webp">
   <link rel="stylesheet" href="./css/styles.css">
-  <script src="./js/modal.js" defer></script>
+  <script src="./js/form.js" defer></script>
 </head>
 <body>
   <!-- HEADER -->
@@ -49,24 +49,24 @@
     <section class="modal__content container">
       <p class="modal__title">Contáctanos</p>
       <p class="modal__paragraph">
-        <span>¡Sé de los primeros y obtén grandes descuentos y benefcios!</span>
+        <span>¡Sé de los primeros y obtén grandes descuentos y beneficios!</span>
       </p>
-      <form class="contact" action="#" method="post">
+      <form id="form-contact" class="contact" action="#" method="post">
         <label class="contact__label" for="contact-name">
           Nombre
-          <input id="contact-name" class="contact__input" type="text" placeholder="Tu nombre">
+          <input id="contact-name" class="contact__input" type="text" placeholder="Tu nombre" required>
         </label>
         <label class="contact__label" for="contact-number">
           Número de celular
-          <input id="contact-number" class="contact__input" type="tel" placeholder="Tu número de celular">
+          <input id="contact-number" class="contact__input" type="tel" placeholder="Tu número de celular" required>
         </label>
         <label class="contact__label" for="contact-email">
           Correo eléctronico
-          <input id="contact-email" class="contact__input" type="email" placeholder="Tu correo eléctronico">
+          <input id="contact-email" class="contact__input" type="email" placeholder="Tu correo eléctronico" required>
         </label>
         <label class="contact__label" for="textarea">
           Mensaje
-          <textarea id="textarea" class="textarea" placeholder="Escribe tu mensaje"></textarea>
+          <textarea id="textarea" class="textarea" placeholder="Escribe tu mensaje" required></textarea>
         </label>
         <input class="contact__input contact__input--submit" type="submit" value="Enviar">
       </form>
@@ -86,12 +86,13 @@
     <div class="line">
       <div class="footer__content container">
         <h5 class="footer__title">
-          <span class="one">Seguridad, protección, control</span>
+          <span class="one">Seguridad, protección, control.</span>
+          <br>
           <span class="two">Lleva tu fraccionamiento al siguiente nivel</span>
         </h5>
         <div class="footer__group-contact">
           <a class="footer__contact" href="mailto:info@acceso614.com" aria-label="Enviar un correo a Acceso 614">info@acceso614.com</a>
-          <a class="footer__contact" href="tel:+526141666502" aria-label="Llamar a Acceso 614">+52 614 166 65 02</a>
+          <a class="footer__contact" href="tel:+526144249263" aria-label="Llamar a Acceso 614">+52 614 424 92 63</a>
         </div>
         <div class="new">
           <div class="footer__group-socials">
